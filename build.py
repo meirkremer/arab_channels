@@ -46,3 +46,8 @@ conf = {
 
             """
         )
+
+
+if __name__ == '__main__':
+    create_venv()
+    create_cred_and_conf()
