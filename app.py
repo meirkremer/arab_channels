@@ -13,7 +13,7 @@ async def main():
 
         @client.on(events.NewMessage(from_users=arab_entity))
         async def handle_new_message(event):
-            id_channel = await client.get_peer_id(event.message.peer_id)
+            id_channel = event.message.peer_id
             translated_message = f'{translate_text(event.message.text)}\n({channels_title[id_channel]})'
             event.message.text = translated_message
             await client.send_message(translate_channel, event.message)
