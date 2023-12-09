@@ -1,5 +1,6 @@
 import asyncio
 from telethon import TelegramClient, events
+from telethon.utils import get_peer_id
 from conf import conf
 from arab_channels_username import arab_channels_usernames
 from translate import translate_text
@@ -13,7 +14,7 @@ async def main():
 
         @client.on(events.NewMessage(from_users=arab_entity))
         async def handle_new_message(event):
-            id_channel = event.message.peer_id
+            id_channel = get_peer_id(event.message.peer_id, add_mark=False)
             translated_message = f'{translate_text(event.message.text)}\n({channels_title[id_channel]})'
             event.message.text = translated_message
             await client.send_message(translate_channel, event.message)
