@@ -4,5 +4,11 @@ arab_channels_usernames = [
     'gazaalannet',
     'jenencamb',
     'hamza20300',
-    'PalestineTv1'
+    'PalestineTv1',
+    'Hosam_press',
+    'Hezbollah',
+    'sepah_quds',
+    'army21ye',
+    'nablsui_98',
+    'qassambrigades'
 ]
